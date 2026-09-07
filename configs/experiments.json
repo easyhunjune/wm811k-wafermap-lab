@@ -1,0 +1,104 @@
+{
+  "project": {
+    "seed": 42,
+    "final_selected_experiment": "E2",
+    "training_seeds": [42, 52, 62, 72, 82],
+    "labels": [
+      "Center",
+      "Donut",
+      "Edge-Loc",
+      "Edge-Ring",
+      "Loc",
+      "Near-full",
+      "Random",
+      "Scratch",
+      "none"
+    ],
+    "split": {
+      "group_column": "lotName",
+      "ratios": {
+        "train": 0.6,
+        "validation": 0.2,
+        "test": 0.2
+      },
+      "candidate_seeds": [42, 52, 62, 72, 82],
+      "selection_criterion": "all-class coverage, group disjointness, then minimum label-distribution deviation"
+    },
+    "training": {
+      "epochs": 50,
+      "batch_size": 128,
+      "num_workers": 0,
+      "optimizer": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "early_stopping_patience": 8,
+      "early_stopping_min_delta": 0.0001,
+      "checkpoint_metric": "validation_macro_f1",
+      "test_policy": "evaluate_once_after_configuration_is_frozen",
+      "bootstrap_replicates": 2000
+    }
+  },
+  "experiments": {
+    "E0": {
+      "kind": "majority_class",
+      "input_mode": null,
+      "loss": null
+    },
+    "E1": {
+      "kind": "cnn",
+      "input_mode": "categorical_single",
+      "input_channels": 1,
+      "input_size": 64,
+      "loss": "cross_entropy"
+    },
+    "E2": {
+      "kind": "cnn",
+      "input_mode": "two_channel_masks",
+      "input_channels": 2,
+      "input_size": 64,
+      "loss": "cross_entropy"
+    },
+    "E3": {
+      "kind": "cnn",
+      "input_mode": "two_channel_masks",
+      "input_channels": 2,
+      "input_size": 64,
+      "loss": "weighted_cross_entropy",
+      "class_weight": {
+        "source": "train_split_only",
+        "formula": "inverse_frequency",
+        "normalization": "mean_one",
+        "clip": null
+      }
+    },
+    "E3b": {
+      "kind": "cnn",
+      "input_mode": "two_channel_masks",
+      "input_channels": 2,
+      "input_size": 64,
+      "loss": "weighted_cross_entropy",
+      "class_weight": {
+        "source": "train_split_only",
+        "formula": "sqrt_inverse_frequency",
+        "normalization": "mean_one",
+        "clip": null
+      }
+    },
+    "E3c": {
+      "kind": "cnn",
+      "input_mode": "two_channel_masks",
+      "input_channels": 2,
+      "input_size": 64,
+      "loss": "weighted_cross_entropy",
+      "class_weight": {
+        "source": "train_split_only",
+        "formula": "inverse_frequency",
+        "normalization": "mean_one",
+        "clip": {
+          "max_min_ratio": 32.0,
+          "rationale": "Match E3b's approximately 32:1 dynamic range while clipping only the inverse-frequency tail."
+        }
+      }
+    }
+  }
+}

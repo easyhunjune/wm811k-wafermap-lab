@@ -1,0 +1,17 @@
+{
+  "experiment": "E3",
+  "seed": 72,
+  "stage": "validation",
+  "split_sha256": "11fa5f986749f905e6b498b0a40bd4464c0575d6f73fa41215f6269b79f36090",
+  "started_at": "2026-07-28T16:50:59.325617+00:00",
+  "device": "cuda",
+  "torch_version": "2.12.1+cu130",
+  "cuda_version": "13.0",
+  "git_commit": null,
+  "finished_at": "2026-07-28T17:03:41.252089+00:00",
+  "duration_seconds": 761.9259269000031,
+  "epochs_run": 23,
+  "best_epoch": 15,
+  "early_stopped": true,
+  "status": "completed"
+}

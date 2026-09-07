@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "stage": "validation",
+  "procedure_signature": "f30cf91b98a28ac714a2832303bf86fc26ef588aeb4ee076a0347b05ac8f08bc",
+  "fixed_hashes": {
+    "data/LSWMD.pkl": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+    "artifacts/splits.csv": "11fa5f986749f905e6b498b0a40bd4464c0575d6f73fa41215f6269b79f36090",
+    "artifacts/E2/best.pt": "8743739f2402765904d9bc6e192def9f28f66bc1b8f192dfedf667fdd51a9903",
+    "artifacts/E2/validation_predictions.csv": "a9118669304c6e771104380d4ece2bfaa177cbf44308b00361ea38b11770da67",
+    "artifacts/E2/test_predictions.csv": "bf53a84800968adedb633cd6c689bcb16ace504d55f25b62616c8381d7341941",
+    "artifacts/E2/test_metrics.json": "fdc4a4cccd17872820008a39d09adeee0632dfc7810245ef5d26bfb4fe735f38"
+  },
+  "prediction_mismatch_count": 0,
+  "group_counts": {
+    "loc_correct": 424,
+    "loc_to_none": 213,
+    "scratch_correct": 143,
+    "scratch_to_none": 77
+  },
+  "cam_task_count": 1147,
+  "zero_cam_count": 0,
+  "missing_overlap_count": 0,
+  "all_cam_shapes": [
+    64,
+    64
+  ],
+  "all_cam_ranges_valid": true,
+  "all_overlap_ranges_valid": true,
+  "some_cam_mass_inside_die": true
+}

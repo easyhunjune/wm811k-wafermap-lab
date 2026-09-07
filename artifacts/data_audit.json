@@ -1,0 +1,204 @@
+{
+  "dataset_path": "data/LSWMD.pkl",
+  "file_size_bytes": 2095505977,
+  "sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+  "rows": 811457,
+  "columns": [
+    "waferMap",
+    "dieSize",
+    "lotName",
+    "waferIndex",
+    "trianTestLabel",
+    "failureType"
+  ],
+  "required_columns_present": {
+    "waferMap": true,
+    "dieSize": true,
+    "lotName": true,
+    "waferIndex": true,
+    "failureType": true
+  },
+  "provided_split_column": "trianTestLabel",
+  "label_audit": {
+    "unlabeled_rows": 638507,
+    "recognized_labeled_rows": 172950,
+    "counts": {
+      "Center": 4294,
+      "Donut": 555,
+      "Edge-Loc": 5189,
+      "Edge-Ring": 9680,
+      "Loc": 3593,
+      "Near-full": 149,
+      "Random": 866,
+      "Scratch": 1193,
+      "none": 147431
+    },
+    "unexpected_labels": {}
+  },
+  "lot_audit": {
+    "missing_lot_name": 0,
+    "distinct_lots_all_rows": 46293,
+    "distinct_lots_labeled_rows": 10762
+  },
+  "wafer_map_audit": {
+    "observed_values": [
+      0,
+      1,
+      2
+    ],
+    "values_valid_0_1_2": true,
+    "invalid_dimension_count": 0,
+    "empty_map_count": 0,
+    "distinct_shapes": 632,
+    "height_range": [
+      6,
+      300
+    ],
+    "width_range": [
+      3,
+      205
+    ],
+    "most_common_shapes": [
+      {
+        "shape": [
+          32,
+          29
+        ],
+        "count": 108687
+      },
+      {
+        "shape": [
+          25,
+          27
+        ],
+        "count": 64083
+      },
+      {
+        "shape": [
+          49,
+          39
+        ],
+        "count": 39323
+      },
+      {
+        "shape": [
+          26,
+          26
+        ],
+        "count": 30078
+      },
+      {
+        "shape": [
+          30,
+          34
+        ],
+        "count": 29513
+      },
+      {
+        "shape": [
+          33,
+          33
+        ],
+        "count": 23886
+      },
+      {
+        "shape": [
+          33,
+          29
+        ],
+        "count": 20276
+      },
+      {
+        "shape": [
+          39,
+          37
+        ],
+        "count": 15327
+      },
+      {
+        "shape": [
+          52,
+          59
+        ],
+        "count": 14812
+      },
+      {
+        "shape": [
+          31,
+          31
+        ],
+        "count": 14569
+      },
+      {
+        "shape": [
+          39,
+          31
+        ],
+        "count": 13562
+      },
+      {
+        "shape": [
+          29,
+          26
+        ],
+        "count": 13247
+      },
+      {
+        "shape": [
+          27,
+          25
+        ],
+        "count": 12655
+      },
+      {
+        "shape": [
+          64,
+          71
+        ],
+        "count": 11692
+      },
+      {
+        "shape": [
+          31,
+          28
+        ],
+        "count": 10788
+      },
+      {
+        "shape": [
+          35,
+          40
+        ],
+        "count": 10676
+      },
+      {
+        "shape": [
+          38,
+          38
+        ],
+        "count": 8895
+      },
+      {
+        "shape": [
+          44,
+          44
+        ],
+        "count": 8601
+      },
+      {
+        "shape": [
+          34,
+          31
+        ],
+        "count": 8155
+      },
+      {
+        "shape": [
+          51,
+          59
+        ],
+        "count": 7890
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "seed": 82,
+  "outer_fold": 3,
+  "inner_fold": 3,
+  "distribution_deviation": 0.0004516826509738969,
+  "rejected_candidates": 0,
+  "selection_uses_model_metrics": false,
+  "dataset_path": "data/LSWMD.pkl",
+  "dataset_sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+  "split_file_sha256": "11fa5f986749f905e6b498b0a40bd4464c0575d6f73fa41215f6269b79f36090",
+  "audit": {
+    "rows": {
+      "train": 103563,
+      "validation": 34615,
+      "test": 34772
+    },
+    "lots": {
+      "train": 6456,
+      "validation": 2147,
+      "test": 2159
+    },
+    "group_overlap": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "class_counts": {
+      "train": {
+        "Center": 2570,
+        "Donut": 309,
+        "Edge-Loc": 3137,
+        "Edge-Ring": 5767,
+        "Loc": 2151,
+        "Near-full": 85,
+        "Random": 503,
+        "Scratch": 743,
+        "none": 88298
+      },
+      "validation": {
+        "Center": 881,
+        "Donut": 139,
+        "Edge-Loc": 1053,
+        "Edge-Ring": 1878,
+        "Loc": 726,
+        "Near-full": 32,
+        "Random": 166,
+        "Scratch": 233,
+        "none": 29507
+      },
+      "test": {
+        "Center": 843,
+        "Donut": 107,
+        "Edge-Loc": 999,
+        "Edge-Ring": 2035,
+        "Loc": 716,
+        "Near-full": 32,
+        "Random": 197,
+        "Scratch": 217,
+        "none": 29626
+      }
+    },
+    "missing_classes": {
+      "train": [],
+      "validation": [],
+      "test": []
+    }
+  }
+}
